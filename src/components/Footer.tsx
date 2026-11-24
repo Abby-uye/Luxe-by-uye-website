@@ -62,7 +62,7 @@ const Footer = () => {
             </a>
             <a
               className="footer_social"
-              href="https://www.tiktok.com/@luxebyuye"
+              href="https://www.tiktok.com/@luxebyuyeparfum"
               target="_blank"
               rel="noopener"
               aria-label="TikTok"
