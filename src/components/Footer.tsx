@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="footer_socials">
             <a
               className="footer_social"
-              href="https://www.instagram.com/luxebyuyeperfume"
+              href="https://www.instagram.com/luxebyuyeparfums"
               target="_blank"
               rel="noopener"
               aria-label="Instagram"
@@ -62,7 +62,7 @@ const Footer = () => {
             </a>
             <a
               className="footer_social"
-              href="https://www.tiktok.com/@luxebyuyeperfume"
+              href="https://www.tiktok.com/@luxebyuye"
               target="_blank"
               rel="noopener"
               aria-label="TikTok"
@@ -94,7 +94,7 @@ const Footer = () => {
 
       <div className="footer_rule" />
       <p className="footer_copy">
-        © 2026 Luxe by Uye · Surulere, Lagos · @luxebyuyeperfume
+        © 2026 Luxe by Uye · Surulere, Lagos · @luxebyuyeparfums
       </p>
     </footer>
   );
