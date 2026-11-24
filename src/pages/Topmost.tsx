@@ -58,7 +58,22 @@ const Topmost = () => {
         <span className="topmost_rule" />
         <p className="topmost_tagline">Elevate your scent story.</p>
       </div>
-      <a className="topmost_scroll" href="#top">
+      <a
+        className="topmost_scroll"
+        href="#hero"
+        onClick={(event) => {
+          const nav = document.getElementById("top");
+          if (!nav) return;
+          event.preventDefault();
+          const stickyTop = Number.parseFloat(getComputedStyle(nav).top) || 0;
+          const top = nav.getBoundingClientRect().top + window.scrollY - stickyTop;
+          const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          window.scrollTo({
+            top: Math.max(0, top),
+            behavior: reduce ? "auto" : "smooth",
+          });
+        }}
+      >
         Scroll
         <span className="topmost_scroll_chevron" aria-hidden="true" />
       </a>
