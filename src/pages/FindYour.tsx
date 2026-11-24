@@ -1,3 +1,4 @@
+import { whatsappChat } from "../whatsapp";
 import "./styles/findYour.scss";
 
 const FindYour = () => {
@@ -9,11 +10,13 @@ const FindYour = () => {
       </p>
       <a
         className="find_your_button"
-        href="https://www.instagram.com/luxebyuyeperfume"
+        href={whatsappChat(
+          "Hello Luxe by Uye, I would like help finding my signature scent."
+        )}
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
-        Message us on Instagram
+        Send us a message
       </a>
     </section>
   );
