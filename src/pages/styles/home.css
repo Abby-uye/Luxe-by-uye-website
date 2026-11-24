@@ -1,0 +1,36 @@
+.home_page_general_wrap {
+  background-image: url("../../assets/luxe-hero-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.home_page_general_wrap .hero_section_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  text-align: center;
+}
+.home_page_general_wrap .hero_section_wrap .hero-title_text {
+  font-size: 64px;
+  font-weight: 800;
+  color: #f0a07a;
+  margin-bottom: 16px;
+}
+.home_page_general_wrap .hero_section_wrap .hero-title_text .hero-title_text_accent {
+  display: block;
+}
+.home_page_general_wrap .hero_section_wrap .hero_description_text {
+  font-size: 24px;
+  color: #f4efe6;
+  margin-bottom: 32px;
+}
+.home_page_general_wrap .hero_section_wrap .hero_description_text .hero-description_accent {
+  display: block;
+}
+
+/*# sourceMappingURL=home.css.map */

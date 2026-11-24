@@ -1,0 +1,52 @@
+.hero {
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(circle 90px at 82% 18%, color-mix(in srgb, var(--olive) 35%, transparent) 0 70px, transparent 71px),
+    radial-gradient(circle 70px at 92% 42%, color-mix(in srgb, var(--olive) 25%, transparent) 0 55px, transparent 56px),
+    radial-gradient(circle 110px at 70% 70%, color-mix(in srgb, var(--olive) 30%, transparent) 0 86px, transparent 87px),
+    radial-gradient(circle 64px at 88% 82%, color-mix(in srgb, var(--olive) 22%, transparent) 0 50px, transparent 51px),
+    radial-gradient(circle 80px at 74% 34%, color-mix(in srgb, var(--gold) 35%, transparent) 0 62px, transparent 63px),
+    radial-gradient(circle 56px at 96% 60%, color-mix(in srgb, var(--gold) 30%, transparent) 0 44px, transparent 45px),
+    radial-gradient(circle 100px at 64% 48%, color-mix(in srgb, var(--forest) 22%, transparent) 0 78px, transparent 79px),
+    radial-gradient(circle 72px at 78% 90%, color-mix(in srgb, var(--forest) 18%, transparent) 0 56px, transparent 57px),
+    linear-gradient(120deg, var(--beige), var(--sage));
+
+  .hero_inner {
+    width: min(1140px, 100%);
+    margin: 0 auto;
+    padding: 40px 24px;
+    box-sizing: border-box;
+  }
+
+  .hero_title {
+    margin: 0;
+    color: var(--forest);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: clamp(40px, 6.2vw, 76px);
+    line-height: 1.02;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  .hero_text {
+    max-width: 26em;
+    margin: 22px 0 30px;
+    color: var(--soft);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.65;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+  }
+}

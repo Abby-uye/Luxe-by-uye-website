@@ -1,0 +1,15 @@
+.shop_general_wrap {
+  display: flex;
+  flex-direction: column;
+  background-color: #fbe0cf;
+  height: 100vh;
+}
+.shop_general_wrap .shop_top_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.shop_general_wrap .shop_top_box .shop_title_text {
+  color: #f0a07a;
+}/*# sourceMappingURL=bestseller.css.map */

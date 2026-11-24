@@ -1,0 +1,84 @@
+
+.lbu-btn {
+  display: inline-block;
+  font-family: 'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2;
+  padding: 14px 28px;
+
+  border: 2px solid var(--btn-border);
+  border-radius: 12px;
+
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.15s;
+
+  // Hover state
+  &:hover {
+    background: var(--btn-hover-bg);
+    color: var(--btn-hover-fg);
+    border-color: var(--btn-hover-border);
+  }
+
+  // Click state
+  &:active {
+    transform: translateY(1px);
+  }
+
+  // Keyboard accessibility
+  &:focus-visible {
+    outline: 2px solid var(--btn-hover-bg);
+    outline-offset: 3px;
+  }
+
+  // Outline variant
+  &--outline {
+    background: transparent;
+    color: var(--btn-bg);
+    border-color: var(--btn-bg);
+
+    &:hover {
+      background: var(--btn-bg);
+      color: var(--btn-fg);
+      border-color: var(--btn-bg);
+    }
+  }
+
+  // Small size
+  &--sm {
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+
+  // Large size
+  &--lg {
+    font-size: 16px;
+    padding: 18px 38px;
+  }
+
+  // Full width
+  &--full {
+    display: block;
+    width: 100%;
+  }
+
+  // Disabled state
+  &.is-disabled,
+  &:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

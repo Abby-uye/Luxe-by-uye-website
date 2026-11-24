@@ -1,0 +1,126 @@
+.our_story_general_box {
+  background-color: #f5c4a8;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 4rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.our_story_general_box .our_story_intro,
+.our_story_general_box .our_story_features {
+  width: 100%;
+  max-width: 680px;
+}
+.our_story_general_box .our_story_intro {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.our_story_general_box .our_story_intro .our_story_title {
+  margin: 0;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f0a07a;
+}
+.our_story_general_box .our_story_intro .our_story_body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.our_story_general_box .our_story_intro .our_story_body p {
+  margin: 0;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2a2521;
+}
+.our_story_general_box .our_story_features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.our_story_general_box .our_story_features .our_story_feature_card {
+  background-color: #0d4a3a;
+  border-left: 4px solid #c9a24f;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+.our_story_general_box .our_story_features .our_story_feature_card .our_story_feature_title {
+  margin: 0;
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #e6c984;
+}
+.our_story_general_box .our_story_features .our_story_feature_card .our_story_feature_description {
+  margin: 0;
+  font-family: "Jost", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .our_story_general_box {
+    padding: 5rem 3rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+  .our_story_general_box .our_story_intro,
+  .our_story_general_box .our_story_features {
+    max-width: none;
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .our_story_general_box .our_story_intro {
+    margin-bottom: 0;
+    max-width: 28rem;
+  }
+  .our_story_general_box .our_story_intro .our_story_title {
+    font-size: 2rem;
+  }
+  .our_story_general_box .our_story_intro .our_story_body p {
+    font-size: 1.05rem;
+  }
+  .our_story_general_box .our_story_features {
+    max-width: 26rem;
+  }
+  .our_story_general_box .our_story_features .our_story_feature_card {
+    padding: 1.75rem 2rem;
+  }
+  .our_story_general_box .our_story_features .our_story_feature_card .our_story_feature_title {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 1024px) {
+  .our_story_general_box {
+    padding: 5.5rem 4rem;
+    gap: 4.5rem;
+  }
+  .our_story_general_box .our_story_intro {
+    max-width: 32rem;
+  }
+  .our_story_general_box .our_story_intro .our_story_title {
+    font-size: 2.25rem;
+  }
+  .our_story_general_box .our_story_features {
+    max-width: 28rem;
+  }
+}
+
+/*# sourceMappingURL=ourStory.css.map */

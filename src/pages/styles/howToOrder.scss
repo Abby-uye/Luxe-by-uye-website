@@ -1,0 +1,79 @@
+.how_to_order_general_box {
+  background: var(--beige);
+  padding: 72px 24px;
+
+  .how_to_order_intro,
+  .how_to_order_steps {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .how_to_order_title {
+    margin: 0 0 12px;
+    color: var(--forest);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: clamp(26px, 3.4vw, 38px);
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .how_to_order_subtitle {
+    max-width: 34em;
+    margin: 0 auto 46px;
+    color: var(--soft);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .how_to_order_steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    counter-reset: step;
+  }
+
+  .how_to_order_step_card {
+    background: var(--ivory);
+    padding: 28px;
+    border-top: 3px solid var(--gold);
+    border-radius: 12px;
+  }
+
+  .how_to_order_step_number {
+    margin: 0 0 8px;
+    color: var(--olive);
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1;
+  }
+
+  .how_to_order_step_title {
+    margin: 0 0 8px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: 0.03em;
+  }
+
+  .how_to_order_step_body {
+    margin: 0;
+    color: var(--soft);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 760px) {
+  .how_to_order_general_box .how_to_order_steps {
+    grid-template-columns: 1fr;
+  }
+}

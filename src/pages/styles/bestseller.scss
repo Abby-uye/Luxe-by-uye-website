@@ -1,0 +1,210 @@
+.shop_general_wrap {
+  background: var(--ivory);
+  padding: 72px 24px;
+
+  .shop_inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .shop_title_text {
+    margin: 0 0 12px;
+    color: var(--forest);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: clamp(26px, 3.4vw, 38px);
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .shop_subtitle_text {
+    max-width: 34em;
+    margin: 0 auto 46px;
+    color: var(--soft);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .shop_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 28px;
+  }
+
+  .shop_card {
+    text-align: center;
+    min-width: 0;
+  }
+
+  .shop_card_visual {
+    position: relative;
+    aspect-ratio: 1 / 1.05;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--sage);
+    margin-bottom: 16px;
+  }
+
+  .shop_photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition:
+      opacity 0.65s ease,
+      transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .shop_photo--b {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  .shop_card:hover .shop_photo--a,
+  .shop_card:focus-within .shop_photo--a {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  .shop_card:hover .shop_photo--b,
+  .shop_card:focus-within .shop_photo--b {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  .shop_corner {
+    position: absolute;
+    z-index: 2;
+    width: 38%;
+    height: 38%;
+    border: 2px solid var(--gold);
+    pointer-events: none;
+  }
+
+  .shop_corner--tl {
+    top: 0;
+    left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-top-left-radius: 12px;
+  }
+
+  .shop_corner--br {
+    right: 0;
+    bottom: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom-right-radius: 12px;
+  }
+
+  .shop_row_rule {
+    grid-column: 1 / -1;
+    height: 1px;
+    margin: 28px 0;
+    border: 0;
+    background: var(--gold);
+  }
+
+  .shop_row_rule--pair {
+    display: none;
+  }
+
+  .shop_card_name {
+    margin: 0 0 6px;
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .shop_card_notes {
+    margin: 0 0 6px;
+    color: var(--soft);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 15px;
+  }
+
+  .shop_card_price {
+    margin: 0;
+    color: var(--forest);
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  .shop_order_button {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 22px;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      background: var(--forest);
+      border-color: var(--forest);
+      color: var(--ivory);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--forest);
+      outline-offset: 3px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .shop_general_wrap .shop_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 20px;
+  }
+
+  .shop_general_wrap .shop_row_rule--trio {
+    display: none;
+  }
+
+  .shop_general_wrap .shop_row_rule--pair {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop_general_wrap .shop_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shop_general_wrap .shop_row_rule--pair {
+    display: none;
+  }
+
+  .shop_general_wrap .shop_row_rule--trio {
+    display: block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shop_general_wrap .shop_photo {
+    transition: none;
+  }
+
+  .shop_general_wrap .shop_photo--b {
+    opacity: 0;
+    transform: none;
+  }
+}
