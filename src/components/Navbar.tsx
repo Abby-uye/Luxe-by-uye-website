@@ -4,13 +4,20 @@ import { routeLinks } from "../routes/routelinks.js";
 
 export default function Navbar() {
   const [onDark, setOnDark] = useState(false);
+  const [concealed, setConcealed] = useState(true);
 
   useEffect(() => {
     let frame = 0;
 
     const update = () => {
-      const nav = document.querySelector(".nav_general_wrap");
+      const nav = document.querySelector<HTMLElement>(".nav_general_wrap");
       if (!nav) return;
+      const stickyTop = Number.parseFloat(getComputedStyle(nav).top) || 0;
+      const intro = document.querySelector(".topmost");
+      const introClear =
+        !intro || intro.getBoundingClientRect().bottom <= stickyTop + 0.5;
+      setConcealed(!introClear);
+
       const box = nav.getBoundingClientRect();
       const probe = box.top + box.height / 2;
       const overDark = [...document.querySelectorAll("[data-nav='dark']")].some(
@@ -20,9 +27,9 @@ export default function Navbar() {
         },
       );
       setOnDark((current) => (current === overDark ? current : overDark));
-      document
-        .querySelector(".safe_area_bar")
-        ?.classList.toggle("safe_area_bar--light", overDark);
+      const bar = document.querySelector(".safe_area_bar");
+      bar?.classList.toggle("safe_area_bar--light", overDark);
+      bar?.classList.toggle("safe_area_bar--hidden", !introClear);
     };
 
     const onScroll = () => {
@@ -42,8 +49,9 @@ export default function Navbar() {
 
   return (
     <div
-      className={`nav_general_wrap${onDark ? " nav_general_wrap--light" : ""}`}
+      className={`nav_general_wrap${onDark ? " nav_general_wrap--light" : ""}${concealed ? " nav_general_wrap--concealed" : ""}`}
       id="top"
+      aria-hidden={concealed || undefined}
     >
       <a className="navbar_logo_wrap" href="/">
         LUXE BY UYE

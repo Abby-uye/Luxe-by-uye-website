@@ -270,10 +270,10 @@ const Combos = () => {
         <button
           type="button"
           className="combos_arrow combos_arrow--prev"
-          aria-label="Previous combo"
-          onClick={() => stepRef.current(-1)}
+          aria-label="Scroll combos right"
+          onClick={() => stepRef.current(1)}
         >
-          <Arrow direction="left" />
+          <Arrow direction="right" />
         </button>
 
         <div className="combos_viewport">
@@ -319,10 +319,10 @@ const Combos = () => {
         <button
           type="button"
           className="combos_arrow combos_arrow--next"
-          aria-label="Next combo"
-          onClick={() => stepRef.current(1)}
+          aria-label="Scroll combos left"
+          onClick={() => stepRef.current(-1)}
         >
-          <Arrow direction="right" />
+          <Arrow direction="left" />
         </button>
       </div>
     </section>

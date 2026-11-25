@@ -62,11 +62,13 @@ const Topmost = () => {
         className="topmost_scroll"
         href="#hero"
         onClick={(event) => {
+          const intro = event.currentTarget.closest(".topmost");
           const nav = document.getElementById("top");
-          if (!nav) return;
+          if (!intro || !nav) return;
           event.preventDefault();
           const stickyTop = Number.parseFloat(getComputedStyle(nav).top) || 0;
-          const top = nav.getBoundingClientRect().top + window.scrollY - stickyTop;
+          const top =
+            intro.getBoundingClientRect().bottom + window.scrollY - stickyTop;
           const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
           window.scrollTo({
             top: Math.max(0, top),
